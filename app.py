@@ -49,7 +49,22 @@ st.markdown(
         color: var(--text);
       }
       [data-testid="stHeader"] { background: transparent; }
-      [data-testid="stToolbar"], [data-testid="stDecoration"] { display: none; }
+      [data-testid="stDecoration"] { display: none; }
+      [data-testid="stToolbar"] { display: flex !important; }
+      [data-testid="stToolbar"] button:not([data-testid="stExpandSidebarButton"]) {
+        display: none !important;
+      }
+      [data-testid="stExpandSidebarButton"] {
+        display: inline-flex !important;
+        color: var(--acid) !important;
+        background: rgba(14, 16, 12, .92) !important;
+        border: 1px solid rgba(223, 255, 54, .28) !important;
+        border-radius: 10px !important;
+        margin: .65rem !important;
+        width: 2.35rem !important;
+        height: 2.35rem !important;
+        box-shadow: 0 0 18px rgba(223, 255, 54, .12) !important;
+      }
       [data-testid="stSidebar"] {
         background: rgba(9, 10, 8, .97);
         border-right: 1px solid rgba(255,255,255,.07);
