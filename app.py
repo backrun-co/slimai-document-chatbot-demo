@@ -253,7 +253,10 @@ with st.sidebar:
     )
 
     if not client:
-        st.warning("Chưa có OPENAI_API_KEY. Hãy thêm key vào tệp .env rồi khởi động lại.")
+        st.warning(
+            "Chưa có OPENAI_API_KEY. Chạy local: thêm key vào tệp .env. "
+            "Bản online: thêm key trong Manage app → Settings → Secrets."
+        )
     else:
         st.markdown(
             '<div class="privacy-note">● Nội dung tệp được gửi tới OpenAI API để lập chỉ mục và trả lời.</div>',
